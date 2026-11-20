@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты | KLAK</title>
+  <meta name="description" content="Шоурумы KLAK в Москве: адреса, часы работы, телефон и форма обратной связи.">
+  <meta name="theme-color" content="#101113">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8ff3d'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23101113'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="logo site-header__logo" href="index.html" aria-label="KLAK, на главную">KL<span class="logo__accent">A</span>K</a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="builder.html">Конструктор</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="icon-button" href="catalog.html#catalog-search" aria-label="Поиск по каталогу"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+        <button class="icon-button icon-button--cart" type="button" data-cart-open aria-label="Корзина"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.5 11h-11z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="icon-button__count" data-cart-count hidden>0</span></button>
+        <button class="icon-button site-header__burger" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+    <section class="page-head">
+      <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item" aria-current="page" data-crumb-current>Контакты</li></ol>
+      </nav>
+        <p class="eyebrow">Контакты</p>
+        <h1 class="page-head__title">Приходите потрогать</h1>
+        <p class="page-head__lead">В шоурумах стоят тестеры всех свитчей и образцы клавиатур. Можно прийти без записи или задать вопрос через форму ниже.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="shops-title">
+      <div class="container contacts">
+        <div class="contacts__shops">
+          <h2 class="visually-hidden" id="shops-title">Шоурумы</h2>
+          <article class="shop-card">
+            <p class="eyebrow">Шоурум № 1</p>
+            <h3 class="shop-card__title">Покровка</h3>
+            <address class="shop-card__address">Москва, ул.&nbsp;Покровка,&nbsp;17, 2&nbsp;этаж<br>м.&nbsp;Китай-город</address>
+            <p class="shop-card__hours"><span>Ежедневно</span> <span>11:00–21:00</span></p>
+          </article>
+          <article class="shop-card">
+            <p class="eyebrow">Шоурум № 2</p>
+            <h3 class="shop-card__title">Сокол</h3>
+            <address class="shop-card__address">Москва, Ленинградский&nbsp;проспект,&nbsp;74<br>м.&nbsp;Сокол</address>
+            <p class="shop-card__hours"><span>Пн–Пт: 12:00–20:00</span> <span>Сб–Вс: 11:00–19:00</span></p>
+          </article>
+          <article class="shop-card shop-card--accent">
+            <p class="eyebrow">Связь</p>
+            <p class="shop-card__phone"><a href="tel:+79991234567">+7&nbsp;(999)&nbsp;123-45-67</a></p>
+            <p class="shop-card__mail"><a class="text-link" href="mailto:hello@klak.store">hello@klak.store</a></p>
+            <p class="shop-card__hours"><span>Отвечаем ежедневно</span> <span>10:00–21:00</span></p>
+          </article>
+        </div>
+        <div class="contacts__map">
+          <iframe class="contacts__frame" title="Шоурумы KLAK на карте" src="https://yandex.ru/map-widget/v1/?ll=37.62%2C55.78&amp;z=11" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="feedback" aria-labelledby="feedback-title">
+      <div class="container feedback">
+        <div class="feedback__intro">
+          <h2 class="section__title section__title--sm" id="feedback-title">Напишите нам</h2>
+          <p>Поможем подобрать клавиатуру, расскажем про доставку или запишем на чистку и смазку свитчей. Ответим в течение рабочего дня.</p>        </div>
+        <form class="order-form feedback__form" action="#" method="post" novalidate data-validate>
+          <div class="order-form__grid">
+            <div class="order-form__field">
+              <label class="order-form__label" for="fb-name">Имя</label>
+              <input class="order-form__input" id="fb-name" name="name" type="text" autocomplete="name" minlength="2" required>
+              <p class="order-form__error" data-error-for="fb-name"></p>
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="fb-email">E-mail</label>
+              <input class="order-form__input" id="fb-email" name="email" type="email" autocomplete="email" required>
+              <p class="order-form__error" data-error-for="fb-email"></p>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__label" for="fb-topic">Тема</label>
+              <select class="order-form__input" id="fb-topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option>Подбор клавиатуры</option>
+                <option>Доставка и оплата</option>
+                <option>Гарантия и обмен</option>
+                <option>Чистка и смазка свитчей</option>
+              </select>
+              <p class="order-form__error" data-error-for="fb-topic"></p>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__label" for="fb-message">Сообщение</label>
+              <textarea class="order-form__input order-form__textarea" id="fb-message" name="message" rows="4" minlength="10" maxlength="1000" required></textarea>
+              <p class="order-form__error" data-error-for="fb-message"></p>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="agree" id="fb-agree" required>
+                <span class="checkbox__box" aria-hidden="true"></span>
+                <span>Согласен на обработку персональных данных</span>
+              </label>
+              <p class="order-form__error" data-error-for="fb-agree"></p>
+            </div>
+          </div>
+          <button class="button button--primary" type="submit">Отправить</button>
+          <p class="success-message" role="status" hidden><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg> Форма успешно отправлена! Ответим в течение рабочего дня.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__brand">
+        <a class="logo site-footer__logo" href="index.html">KL<span class="logo__accent">A</span>K</a>
+        <p class="site-footer__text">Механические клавиатуры, свитчи и кейкапы.<br>Собираем клавиатуры под ваш стиль печати.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <p class="eyebrow site-footer__title">Навигация</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html">Главная</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="builder.html">Конструктор</a></li>
+          <li><a class="site-footer__link" href="about.html">О нас</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__contacts">
+        <p class="eyebrow site-footer__title">Заглядывайте</p>
+        <ul class="site-footer__contact-list">
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Москва, ул.&nbsp;Покровка,&nbsp;17</span></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="nowrap">Ежедневно, 11:00–21:00</span></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3l2 5-2 2a15 15 0 0 0 6 6l2-2 5 2v3a2 2 0 0 1-2 2C10 20 4 14 3 5a2 2 0 0 1 2-2Z"/></svg><a href="tel:+79991234567">+7&nbsp;(999)&nbsp;123-45-67</a></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:hello@klak.store">hello@klak.store</a></li>
+        </ul>
+        <a class="button button--primary site-footer__cta" href="builder.html">Собрать клавиатуру ↗</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <span>© 2026 KLAK. Все права защищены</span>
+      <span>С любовью к щелчку</span>
+    </div>
+  </footer>
+
+  <!-- Корзина: боковая панель (position: fixed + overlay) -->
+  <div class="cart-drawer" id="cart-drawer" hidden>
+    <div class="cart-drawer__overlay" data-cart-close></div>
+    <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title" id="cart-title">Корзина</h2>
+        <button class="icon-button" type="button" data-cart-close aria-label="Закрыть корзину"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items></div>
+      <div class="cart-drawer__foot">
+        <p class="cart-drawer__total"><span>Итого</span><b data-cart-total>0 ₽</b></p>
+        <a class="button button--primary button--wide" href="order.html" data-cart-checkout>Оформить заказ</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Сравнение: нативный dialog -->
+  <dialog class="compare-dialog" id="compare-dialog" aria-labelledby="compare-title">
+    <div class="compare-dialog__head">
+      <h2 class="compare-dialog__title" id="compare-title">Сравнение товаров</h2>
+      <button class="icon-button" type="button" data-compare-close aria-label="Закрыть сравнение"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="compare-dialog__body" data-compare-table></div>
+    <div class="compare-dialog__foot">
+      <p class="compare-dialog__note">Сравнивать можно до 3 товаров одной категории. Лучшее значение подсвечено.</p>
+      <button class="button button--ghost" type="button" data-compare-clear>Очистить</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+  <!-- Кнопка «Наверх» в виде клавиши-кейкапа со стрелкой вверх -->
+  <button class="to-top" type="button" data-to-top aria-label="Вернуться наверх" title="Наверх">
+    <span class="to-top__cap" aria-hidden="true">
+      <span class="to-top__legend">↑</span>
+      <span class="to-top__label">наверх</span>
+    </span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

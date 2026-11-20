@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог | KLAK</title>
+  <meta name="description" content="Каталог KLAK: клавиатуры, свитчи, кейкапы и аксессуары. Поиск, фильтры, избранное и сравнение.">
+  <meta name="theme-color" content="#101113">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c8ff3d'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23101113'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="logo site-header__logo" href="index.html" aria-label="KLAK, на главную">KL<span class="logo__accent">A</span>K</a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="builder.html">Конструктор</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="icon-button" href="catalog.html#catalog-search" aria-label="Поиск по каталогу"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+        <button class="icon-button icon-button--cart" type="button" data-cart-open aria-label="Корзина"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.5 11h-11z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="icon-button__count" data-cart-count hidden>0</span></button>
+        <button class="icon-button site-header__burger" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+    <section class="page-head">
+      <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item" aria-current="page" data-crumb-current>Каталог</li></ol>
+      </nav>
+        <p class="eyebrow">Каталог</p>
+        <h1 class="page-head__title">Клавиатуры и комплектующие</h1>
+        <p class="page-head__lead">Готовые клавиатуры, свитчи, кейкапы и аксессуары. Ищите по названию и характеристикам, добавляйте в избранное и сравнивайте до трёх товаров.</p>
+        <ul class="page-head__tags"><li class="tag"><b>12</b> товаров</li><li class="tag"><b>4</b> категории</li><li class="tag">доставка от 1 дня</li></ul>
+      </div>
+    </section>
+
+    <section class="section section--catalog" aria-label="Товары каталога">
+      <div class="catalog-layout container">
+        <!-- Фильтры каталога -->
+        <aside class="catalog-filters" aria-labelledby="filters-title">
+          <details class="catalog-filters__panel" open data-filters-panel>
+          <summary class="catalog-filters__summary">Фильтры и сортировка</summary>
+          <form class="catalog-filters__form" data-filters>
+            <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend">Категория</legend>
+              <ul class="catalog-filters__list">
+              <li><label class="filter-option"><input class="filter-option__input" type="radio" name="category" value="all" checked><span class="filter-option__label">Все товары</span><span class="filter-option__count">12</span></label></li>
+              <li><label class="filter-option"><input class="filter-option__input" type="radio" name="category" value="keyboards"><span class="filter-option__label">Клавиатуры</span><span class="filter-option__count">4</span></label></li>
+              <li><label class="filter-option"><input class="filter-option__input" type="radio" name="category" value="switches"><span class="filter-option__label">Свитчи</span><span class="filter-option__count">3</span></label></li>
+              <li><label class="filter-option"><input class="filter-option__input" type="radio" name="category" value="keycaps"><span class="filter-option__label">Кейкапы</span><span class="filter-option__count">3</span></label></li>
+              <li><label class="filter-option"><input class="filter-option__input" type="radio" name="category" value="accessories"><span class="filter-option__label">Аксессуары</span><span class="filter-option__count">2</span></label></li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend">Цена, ₽</legend>
+              <div class="catalog-filters__price">
+                <label class="visually-hidden" for="price-min">Цена от</label>
+                <input class="catalog-filters__input" id="price-min" name="min" type="number" min="0" step="100" placeholder="от" inputmode="numeric">
+                <span aria-hidden="true">-</span>
+                <label class="visually-hidden" for="price-max">Цена до</label>
+                <input class="catalog-filters__input" id="price-max" name="max" type="number" min="0" step="100" placeholder="до" inputmode="numeric">
+              </div>
+            </fieldset>
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend">Особенности</legend>
+              <label class="checkbox"><input class="checkbox__input" type="checkbox" name="flag" value="wireless"><span class="checkbox__box" aria-hidden="true"></span><span>Беспроводные</span></label>
+              <label class="checkbox"><input class="checkbox__input" type="checkbox" name="flag" value="hotswap"><span class="checkbox__box" aria-hidden="true"></span><span>Hot-swap</span></label>
+              <label class="checkbox"><input class="checkbox__input" type="checkbox" name="flag" value="sale"><span class="checkbox__box" aria-hidden="true"></span><span>Со скидкой</span></label>
+            </fieldset>
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend"><label for="sort">Сортировка</label></legend>
+              <select class="catalog-filters__input catalog-filters__select" id="sort" name="sort">
+                <option value="popular">Сначала популярные</option>
+                <option value="cheap">Сначала дешевле</option>
+                <option value="expensive">Сначала дороже</option>
+                <option value="name">По названию</option>
+              </select>
+            </fieldset>
+            <button class="button button--ghost button--wide" type="reset">Сбросить фильтры</button>
+          </form>
+          </details>
+
+        </aside>
+
+        <div class="catalog-layout__content">
+          <!-- Sticky-панель: поиск, избранное, сравнение -->
+          <div class="catalog-toolbar" data-toolbar>
+            <label class="search-field" for="catalog-search">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <span class="visually-hidden">Поиск по каталогу</span>
+              <input class="search-field__input" id="catalog-search" type="search" placeholder="Поиск: «75%», «linear», «PBT»…" autocomplete="off" data-search>
+            </label>
+            <button class="toolbar-button" type="button" data-favorites-only aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg> <span>Избранное</span> <b data-favorites-count-inline>0</b></button>
+            <button class="toolbar-button" type="button" data-compare-open><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg> <span>Сравнить</span> <b><span data-compare-count-inline>0</span>/3</b></button>
+          </div>
+          <p class="catalog-status" role="status" aria-live="polite" data-catalog-status>Найдено: 12</p>
+          <div class="products-grid products-grid--catalog" data-catalog-grid>
+        <article class="product-card product-card--hit" data-product-card data-id="klak-75-pro" data-category="keyboards" data-price="12900" data-flags="wireless hotswap" data-search="klak 75 pro клавиатуры алюминиевый корпус, gasket-mount и три режима подключения. 75% · hot-swap · 2.4 ггц / bt / usb-c 75%, 84 клавиши алюминий gasket да, 5-pin 2.4 ггц, bluetooth 5.1, usb-c 4000 ма·ч rgb, под клавишами 1,4 кг">
+          <a class="product-card__media" href="product.html?id=klak-75-pro" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/klak-75-pro-640.webp" srcset="images/klak-75-pro-640.webp 640w, images/klak-75-pro-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="KLAK 75 Pro" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--hit">Хит</span>
+          <button class="product-card__favorite" type="button" data-favorite="klak-75-pro" aria-pressed="false" aria-label="Добавить «KLAK 75 Pro» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Клавиатуры</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=klak-75-pro">KLAK 75 Pro</a></h3>
+            <p class="product-card__description">Алюминиевый корпус, gasket-mount и три режима подключения.</p>
+            <p class="product-card__specs">75% · hot-swap · 2.4 ГГц / BT / USB-C</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">12 900 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="klak-75-pro" aria-pressed="false" aria-label="Добавить «KLAK 75 Pro» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="klak-75-pro">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-id="klak-tkl-silent" data-category="keyboards" data-price="9990" data-flags="hotswap" data-search="klak tkl silent клавиатуры бесшумные свитчи и шумоизоляция для офиса и ночной работы. tkl · silent linear · usb-c tkl, 87 клавиш пластик abs tray да, 3-pin usb-c нет белая 0,9 кг">
+          <a class="product-card__media" href="product.html?id=klak-tkl-silent" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/klak-tkl-silent-640.webp" srcset="images/klak-tkl-silent-640.webp 640w, images/klak-tkl-silent-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="KLAK TKL Silent" loading="lazy" decoding="async">
+          </a>
+          <button class="product-card__favorite" type="button" data-favorite="klak-tkl-silent" aria-pressed="false" aria-label="Добавить «KLAK TKL Silent» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Клавиатуры</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=klak-tkl-silent">KLAK TKL Silent</a></h3>
+            <p class="product-card__description">Бесшумные свитчи и шумоизоляция для офиса и ночной работы.</p>
+            <p class="product-card__specs">TKL · silent linear · USB-C</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">9 990 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="klak-tkl-silent" aria-pressed="false" aria-label="Добавить «KLAK TKL Silent» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="klak-tkl-silent">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--new" data-product-card data-id="klak-65-air" data-category="keyboards" data-price="8490" data-flags="wireless hotswap" data-search="klak 65 air клавиатуры компактная и лёгкая: помещается в рюкзак вместе с ноутбуком. 65% · hot-swap · bt / usb-c 65%, 68 клавиш пластик pc gasket да, 5-pin bluetooth 5.1, usb-c 3000 ма·ч rgb 0,7 кг">
+          <a class="product-card__media" href="product.html?id=klak-65-air" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/klak-65-air-640.webp" srcset="images/klak-65-air-640.webp 640w, images/klak-65-air-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="KLAK 65 Air" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <button class="product-card__favorite" type="button" data-favorite="klak-65-air" aria-pressed="false" aria-label="Добавить «KLAK 65 Air» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Клавиатуры</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=klak-65-air">KLAK 65 Air</a></h3>
+            <p class="product-card__description">Компактная и лёгкая: помещается в рюкзак вместе с ноутбуком.</p>
+            <p class="product-card__specs">65% · hot-swap · BT / USB-C</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">8 490 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="klak-65-air" aria-pressed="false" aria-label="Добавить «KLAK 65 Air» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="klak-65-air">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--sale" data-product-card data-id="klak-full-office" data-category="keyboards" data-price="7990" data-flags="sale" data-search="klak full office клавиатуры полноразмерная с цифровым блоком для таблиц и бухгалтерии. full · tactile · usb-c 100%, 104 клавиши пластик abs tray нет usb-c нет белая 1,1 кг">
+          <a class="product-card__media" href="product.html?id=klak-full-office" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/klak-full-office-640.webp" srcset="images/klak-full-office-640.webp 640w, images/klak-full-office-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="KLAK Full Office" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--sale">−15%</span>
+          <button class="product-card__favorite" type="button" data-favorite="klak-full-office" aria-pressed="false" aria-label="Добавить «KLAK Full Office» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Клавиатуры</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=klak-full-office">KLAK Full Office</a></h3>
+            <p class="product-card__description">Полноразмерная с цифровым блоком для таблиц и бухгалтерии.</p>
+            <p class="product-card__specs">Full · tactile · USB-C</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">7 990 ₽ <s class="product-card__old-price">9 390 ₽</s></p>
+              <button class="product-card__compare" type="button" data-compare="klak-full-office" aria-pressed="false" aria-label="Добавить «KLAK Full Office» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="klak-full-office">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--new" data-product-card data-id="lime-linear" data-category="switches" data-price="2490" data-flags="" data-search="lime linear ×70 свитчи плавный линейный ход без щелчка, заводская смазка. linear · 45 гс · ход 3.8 мм линейный 45 гс 3,8 мм 2,0 мм 5-pin заводская тихий 70 шт">
+          <a class="product-card__media" href="product.html?id=lime-linear" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/lime-linear-640.webp" srcset="images/lime-linear-640.webp 640w, images/lime-linear-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Lime Linear ×70" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
+          <button class="product-card__favorite" type="button" data-favorite="lime-linear" aria-pressed="false" aria-label="Добавить «Lime Linear ×70» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Свитчи</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=lime-linear">Lime Linear ×70</a></h3>
+            <p class="product-card__description">Плавный линейный ход без щелчка, заводская смазка.</p>
+            <p class="product-card__specs">linear · 45 гс · ход 3.8 мм</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">2 490 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="lime-linear" aria-pressed="false" aria-label="Добавить «Lime Linear ×70» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="lime-linear">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-id="coral-tactile" data-category="switches" data-price="2690" data-flags="" data-search="coral tactile ×70 свитчи заметная «ступенька» в начале хода, удобно для текста. tactile · 55 гс · ход 4.0 мм тактильный 55 гс 4,0 мм 2,0 мм 5-pin заводская средний 70 шт">
+          <a class="product-card__media" href="product.html?id=coral-tactile" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/coral-tactile-640.webp" srcset="images/coral-tactile-640.webp 640w, images/coral-tactile-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Coral Tactile ×70" loading="lazy" decoding="async">
+          </a>
+          <button class="product-card__favorite" type="button" data-favorite="coral-tactile" aria-pressed="false" aria-label="Добавить «Coral Tactile ×70» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Свитчи</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=coral-tactile">Coral Tactile ×70</a></h3>
+            <p class="product-card__description">Заметная «ступенька» в начале хода, удобно для текста.</p>
+            <p class="product-card__specs">tactile · 55 гс · ход 4.0 мм</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">2 690 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="coral-tactile" aria-pressed="false" aria-label="Добавить «Coral Tactile ×70» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="coral-tactile">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--sale" data-product-card data-id="ice-clicky" data-category="switches" data-price="2290" data-flags="sale" data-search="ice clicky ×70 свитчи звонкий щелчок на каждое нажатие, как у старых клавиатур. clicky · 60 гс · ход 4.0 мм кликающий 60 гс 4,0 мм 2,2 мм 3-pin нет громкий 70 шт">
+          <a class="product-card__media" href="product.html?id=ice-clicky" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/ice-clicky-640.webp" srcset="images/ice-clicky-640.webp 640w, images/ice-clicky-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Ice Clicky ×70" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--sale">−15%</span>
+          <button class="product-card__favorite" type="button" data-favorite="ice-clicky" aria-pressed="false" aria-label="Добавить «Ice Clicky ×70» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Свитчи</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=ice-clicky">Ice Clicky ×70</a></h3>
+            <p class="product-card__description">Звонкий щелчок на каждое нажатие, как у старых клавиатур.</p>
+            <p class="product-card__specs">clicky · 60 гс · ход 4.0 мм</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">2 290 ₽ <s class="product-card__old-price">2 690 ₽</s></p>
+              <button class="product-card__compare" type="button" data-compare="ice-clicky" aria-pressed="false" aria-label="Добавить «Ice Clicky ×70» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="ice-clicky">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--sale" data-product-card data-id="graphite-caps" data-category="keycaps" data-price="4290" data-flags="sale" data-search="кейкапы «graphite» кейкапы плотный pbt с double-shot надписями, профиль cherry. 140 шт · pbt · cherry pbt, 1,5 мм double-shot cherry 140 шт ansi + кириллица mx-стебель графит + лайм 0,4 кг">
+          <a class="product-card__media" href="product.html?id=graphite-caps" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/graphite-caps-640.webp" srcset="images/graphite-caps-640.webp 640w, images/graphite-caps-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Кейкапы «Graphite»" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--sale">−17%</span>
+          <button class="product-card__favorite" type="button" data-favorite="graphite-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Graphite»» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Кейкапы</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=graphite-caps">Кейкапы «Graphite»</a></h3>
+            <p class="product-card__description">Плотный PBT с double-shot надписями, профиль Cherry.</p>
+            <p class="product-card__specs">140 шт · PBT · Cherry</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">4 290 ₽ <s class="product-card__old-price">5 190 ₽</s></p>
+              <button class="product-card__compare" type="button" data-compare="graphite-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Graphite»» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="graphite-caps">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card product-card--hit" data-product-card data-id="lime-caps" data-category="keycaps" data-price="4590" data-flags="" data-search="кейкапы «lime pop» кейкапы яркий лаймовый набор с тёмными модификаторами. 130 шт · pbt · cherry pbt, 1,4 мм dye-sub cherry 130 шт ansi + кириллица mx-стебель лайм + графит 0,38 кг">
+          <a class="product-card__media" href="product.html?id=lime-caps" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/lime-caps-640.webp" srcset="images/lime-caps-640.webp 640w, images/lime-caps-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Кейкапы «Lime Pop»" loading="lazy" decoding="async">
+          </a>
+          <span class="product-card__badge product-card__badge--hit">Хит</span>
+          <button class="product-card__favorite" type="button" data-favorite="lime-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Lime Pop»» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Кейкапы</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=lime-caps">Кейкапы «Lime Pop»</a></h3>
+            <p class="product-card__description">Яркий лаймовый набор с тёмными модификаторами.</p>
+            <p class="product-card__specs">130 шт · PBT · Cherry</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">4 590 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="lime-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Lime Pop»» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="lime-caps">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-id="retro-caps" data-category="keycaps" data-price="4890" data-flags="" data-search="кейкапы «retro beige» кейкапы бежевые кейкапы в духе компьютеров 80-х. 150 шт · pbt · sa pbt, 1,5 мм dye-sub sa 150 шт ansi + кириллица mx-стебель бежевый + серый 0,52 кг">
+          <a class="product-card__media" href="product.html?id=retro-caps" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/retro-caps-640.webp" srcset="images/retro-caps-640.webp 640w, images/retro-caps-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Кейкапы «Retro Beige»" loading="lazy" decoding="async">
+          </a>
+          <button class="product-card__favorite" type="button" data-favorite="retro-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Retro Beige»» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Кейкапы</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=retro-caps">Кейкапы «Retro Beige»</a></h3>
+            <p class="product-card__description">Бежевые кейкапы в духе компьютеров 80-х.</p>
+            <p class="product-card__specs">150 шт · PBT · SA</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">4 890 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="retro-caps" aria-pressed="false" aria-label="Добавить «Кейкапы «Retro Beige»» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="retro-caps">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-id="coil-cable" data-category="accessories" data-price="1490" data-flags="" data-search="кабель-спираль «coil» аксессуары витой кабель usb-c с авиаразъёмом, 1,5 м. usb-c · 1,5 м · авиаразъём usb-c → usb-c 1,5 м 20 см да нейлон лайм любые usb-c клавиатуры 0,12 кг">
+          <a class="product-card__media" href="product.html?id=coil-cable" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/coil-cable-640.webp" srcset="images/coil-cable-640.webp 640w, images/coil-cable-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Кабель-спираль «Coil»" loading="lazy" decoding="async">
+          </a>
+          <button class="product-card__favorite" type="button" data-favorite="coil-cable" aria-pressed="false" aria-label="Добавить «Кабель-спираль «Coil»» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Аксессуары</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=coil-cable">Кабель-спираль «Coil»</a></h3>
+            <p class="product-card__description">Витой кабель USB-C с авиаразъёмом, 1,5 м.</p>
+            <p class="product-card__specs">USB-C · 1,5 м · авиаразъём</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">1 490 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="coil-cable" aria-pressed="false" aria-label="Добавить «Кабель-спираль «Coil»» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="coil-cable">В корзину</button>
+          </div>
+        </article>
+        <article class="product-card" data-product-card data-id="wrist-rest" data-category="accessories" data-price="2190" data-flags="" data-search="подставка «walnut» аксессуары подставка под запястья из массива ореха. орех · 360 мм · для 75% / tkl массив ореха 360 мм 85 мм 18 мм резина масло 75% и tkl 0,35 кг">
+          <a class="product-card__media" href="product.html?id=wrist-rest" tabindex="-1" aria-hidden="true">
+            <img class="product-card__image" src="images/wrist-rest-640.webp" srcset="images/wrist-rest-640.webp 640w, images/wrist-rest-1280.webp 1280w" sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw" width="640" height="480" alt="Подставка «Walnut»" loading="lazy" decoding="async">
+          </a>
+          <button class="product-card__favorite" type="button" data-favorite="wrist-rest" aria-pressed="false" aria-label="Добавить «Подставка «Walnut»» в избранное"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
+          <div class="product-card__body">
+            <p class="product-card__category">Аксессуары</p>
+            <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=wrist-rest">Подставка «Walnut»</a></h3>
+            <p class="product-card__description">Подставка под запястья из массива ореха.</p>
+            <p class="product-card__specs">орех · 360 мм · для 75% / TKL</p>
+            <div class="product-card__footer">
+              <p class="product-card__price">2 190 ₽</p>
+              <button class="product-card__compare" type="button" data-compare="wrist-rest" aria-pressed="false" aria-label="Добавить «Подставка «Walnut»» к сравнению"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M4 12h7M4 17h11M18 5v14M15 8l3-3 3 3"/></svg></button>
+            </div>
+            <button class="button button--primary product-card__buy" type="button" data-add-to-cart="wrist-rest">В корзину</button>
+          </div>
+        </article>
+          </div>
+          <div class="empty-state" data-catalog-empty hidden>
+            <h3 class="empty-state__title">Ничего не нашлось</h3>
+            <p class="empty-state__text">Попробуйте другое слово или сбросьте фильтры.</p>
+            <button class="button button--ghost" type="button" data-catalog-reset>Сбросить фильтры</button>
+          </div>
+          <div class="catalog-hint">
+            <p class="catalog-hint__title">Не знаете, какой свитч?</p>
+            <p>Разницу между линейными, тактильными и кликающими мы собрали в <a class="text-link" href="index.html#switches">гиде по свитчам</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner container">
+      <div class="site-footer__brand">
+        <a class="logo site-footer__logo" href="index.html">KL<span class="logo__accent">A</span>K</a>
+        <p class="site-footer__text">Механические клавиатуры, свитчи и кейкапы.<br>Собираем клавиатуры под ваш стиль печати.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <p class="eyebrow site-footer__title">Навигация</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html">Главная</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="builder.html">Конструктор</a></li>
+          <li><a class="site-footer__link" href="about.html">О нас</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__contacts">
+        <p class="eyebrow site-footer__title">Заглядывайте</p>
+        <ul class="site-footer__contact-list">
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Москва, ул.&nbsp;Покровка,&nbsp;17</span></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="nowrap">Ежедневно, 11:00–21:00</span></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3l2 5-2 2a15 15 0 0 0 6 6l2-2 5 2v3a2 2 0 0 1-2 2C10 20 4 14 3 5a2 2 0 0 1 2-2Z"/></svg><a href="tel:+79991234567">+7&nbsp;(999)&nbsp;123-45-67</a></li>
+          <li class="site-footer__contact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:hello@klak.store">hello@klak.store</a></li>
+        </ul>
+        <a class="button button--primary site-footer__cta" href="builder.html">Собрать клавиатуру ↗</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <span>© 2026 KLAK. Все права защищены</span>
+      <span>С любовью к щелчку</span>
+    </div>
+  </footer>
+
+  <!-- Корзина: боковая панель (position: fixed + overlay) -->
+  <div class="cart-drawer" id="cart-drawer" hidden>
+    <div class="cart-drawer__overlay" data-cart-close></div>
+    <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-drawer__head">
+        <h2 class="cart-drawer__title" id="cart-title">Корзина</h2>
+        <button class="icon-button" type="button" data-cart-close aria-label="Закрыть корзину"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items></div>
+      <div class="cart-drawer__foot">
+        <p class="cart-drawer__total"><span>Итого</span><b data-cart-total>0 ₽</b></p>
+        <a class="button button--primary button--wide" href="order.html" data-cart-checkout>Оформить заказ</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Сравнение: нативный dialog -->
+  <dialog class="compare-dialog" id="compare-dialog" aria-labelledby="compare-title">
+    <div class="compare-dialog__head">
+      <h2 class="compare-dialog__title" id="compare-title">Сравнение товаров</h2>
+      <button class="icon-button" type="button" data-compare-close aria-label="Закрыть сравнение"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="compare-dialog__body" data-compare-table></div>
+    <div class="compare-dialog__foot">
+      <p class="compare-dialog__note">Сравнивать можно до 3 товаров одной категории. Лучшее значение подсвечено.</p>
+      <button class="button button--ghost" type="button" data-compare-clear>Очистить</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+  <!-- Кнопка «Наверх» в виде клавиши-кейкапа со стрелкой вверх -->
+  <button class="to-top" type="button" data-to-top aria-label="Вернуться наверх" title="Наверх">
+    <span class="to-top__cap" aria-hidden="true">
+      <span class="to-top__legend">↑</span>
+      <span class="to-top__label">наверх</span>
+    </span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
